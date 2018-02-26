@@ -1,3 +1,6 @@
-
+!dummy.$$$
+!fp___.out
+!fp___.err
+!fp.dir
 *.bak
 *.o
