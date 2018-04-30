@@ -1,32 +1,18 @@
 uses crt;
-type arr=array [1..100] of integer;
-var m,k:integer;
-    a: arr;
-procedure swap(var a,b:integer);
+var n,i:integer;
+function sum1(a):integer;
  begin
- a:=a+b;b:=a-b;a:=a-b
+ sum1:=0;
+ for i:= 1 to a do sum1:=sum1+i;
  end;
-procedure sort(var b:arr; n:integer; t:string);
- var i,j:integer;
+function sum2(a):real;
  begin
- if t='az' then
-  for i:=n downto 2 do
-   for j:=1 to i-1 do
-    if a[j]>a[j+1] then swap(a[j],a[j+1]);
- if t='za' then
-  for i:=1 to n-1 do
-   for j:=n-1 downto i do
-    if a[j]<a[j+1] then swap(a[j],a[j+1]);
-  end;
+ sum2:=0;
+ for i:=1 to a do sum2:=sum2+1/i;
+ end;
 begin
-clrscr;
-readln(m);
-for k:=1 to m do readln(a[k]);
-writeln;
-sort(a,m,'az');
-for k:=1 to m do write(a[k]:6);
-sort(a,m,'za');
-writeln;
-for k:=1 to m do write(a[k]:6);
+readln(n);
+writeln('Tong thu nhat: ',sum1:10);
+writeln('Tong thu hai: ',sum2:10:3);
 readln
 end.

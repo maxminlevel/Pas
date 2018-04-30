@@ -1,32 +1,30 @@
+
 uses crt;
-type arr=array [1..100] of integer;
-var m,k:integer;
-    a: arr;
-procedure swap(var a,b:integer);
- begin
- a:=a+b;b:=a-b;a:=a-b
- end;
-procedure sort(var b:arr; n:integer; t:string);
- var i,j:integer;
- begin
- if t='az' then
-  for i:=n downto 2 do
-   for j:=1 to i-1 do
-    if a[j]>a[j+1] then swap(a[j],a[j+1]);
- if t='za' then
-  for i:=1 to n-1 do
-   for j:=n-1 downto i do
-    if a[j]<a[j+1] then swap(a[j],a[j+1]);
-  end;
+var st:string;
+	i:integer;
+function chuso(xau:string):integer;
+	begin
+	chuso:=0;
+	for i:=1 to length(xau) do
+		if xau[i] >='0' and xau[i]<='9' then chuso:=chuso+1;
+	end;
+
+function kytu(xau:string):integer;
+	begin
+	kytu:=0;
+	for i:=1 to length(xau) do
+		if (xau[i] >='a' and xau[i]<='z') or (xau[i] >='A' and xau[i]<='Z') then kytu:=kytu+1;
+	end;
+
+function daonguoc(xau:string):string;
+	begin
+	daonguoc:='';
+	for i:=length(xau) downto 1 do daonguoc:=daonguoc+xau[i];
+	end;
 begin
-clrscr;
-readln(m);
-for k:=1 to m do readln(a[k]);
-writeln;
-sort(a,m,'az');
-for k:=1 to m do write(a[k]:6);
-sort(a,m,'za');
-writeln;
-for k:=1 to m do write(a[k]:6);
+readln(st);
+writeln('So chu so trong xau ',chuso(st));
+writeln('So ky tu trong xau ', kytu(st));
+writeln('Xau dao nguoc la ',daonguoc(st));
 readln
 end.

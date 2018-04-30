@@ -1,32 +1,15 @@
 uses crt;
-type arr=array [1..100] of integer;
-var m,k:integer;
-    a: arr;
-procedure swap(var a,b:integer);
+var x,y:integer
+function ucln(a,b):integer;
+ var 
  begin
- a:=a+b;b:=a-b;a:=a-b
+ while (a mod b <> 0) or (b mod a <> 0) do
+ 	if a>b then a:=a mod b else b:= b mod a;
+ ucln:=a;
  end;
-procedure sort(var b:arr; n:integer; t:string);
- var i,j:integer;
- begin
- if t='az' then
-  for i:=n downto 2 do
-   for j:=1 to i-1 do
-    if a[j]>a[j+1] then swap(a[j],a[j+1]);
- if t='za' then
-  for i:=1 to n-1 do
-   for j:=n-1 downto i do
-    if a[j]<a[j+1] then swap(a[j],a[j+1]);
-  end;
 begin
-clrscr;
-readln(m);
-for k:=1 to m do readln(a[k]);
-writeln;
-sort(a,m,'az');
-for k:=1 to m do write(a[k]:6);
-sort(a,m,'za');
-writeln;
-for k:=1 to m do write(a[k]:6);
+Write('Tu so'); readln(x);
+Write('Mau so'); readln(y);
+Write('Rut gon: ',x/ucln(x,y),'/',y/ucln(x,y) );
 readln
 end.

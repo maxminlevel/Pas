@@ -1,32 +1,43 @@
 uses crt;
 type arr=array [1..100] of integer;
-var m,k:integer;
-    a: arr;
+var a:arr;
+    n,i:integer;
+
+
+{hoán đổi}
 procedure swap(var a,b:integer);
+ var tg:integer;
  begin
- a:=a+b;b:=a-b;a:=a-b
+ tg:=a;a:=b;b:=tg;
  end;
-procedure sort(var b:arr; n:integer; t:string);
- var i,j:integer;
+
+{tăng dần}
+procedure tang(var b:arr; m:integer);
+ var j,tg:integer;
  begin
- if t='az' then
-  for i:=n downto 2 do
-   for j:=1 to i-1 do
-    if a[j]>a[j+1] then swap(a[j],a[j+1]);
- if t='za' then
-  for i:=1 to n-1 do
-   for j:=n-1 downto i do
-    if a[j]<a[j+1] then swap(a[j],a[j+1]);
-  end;
+ for i:=m downto 2 do
+  for j:=1 to i-1 do 	
+   if a[j]>a[j+1] then swap(a[j];a[j+1]);
+ end;
+
+{giảm dần}
+procedure giam(var b:arr; m:integer);
+ var j,tg:integer;
+ begin
+ for i:=1 to n-1 do
+  for j:=n-1 downto i do 	
+   if a[j]<a[j+1] then swap(a[j];a[j+1]); 
+ end;
+
 begin
-clrscr;
-readln(m);
-for k:=1 to m do readln(a[k]);
-writeln;
-sort(a,m,'az');
-for k:=1 to m do write(a[k]:6);
-sort(a,m,'za');
-writeln;
-for k:=1 to m do write(a[k]:6);
+write('n= ');readln(n);
+for i:=1 to n do
+ begin
+ write('A[',i,']=');readln(a[i]);
+ end;
+tang(a,n);
+for i:=1 to n do write(A[i]:5); {in dãy tăng}
+giam(a,n);
+for i:=1 to n do write(A[i]:5); {in dãy giảm}
 readln
 end.

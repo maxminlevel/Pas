@@ -1,32 +1,14 @@
-uses crt;
+{đề: nhập dãy số nguyên và hiển thị các số ra màn hình}
+
 type arr=array [1..100] of integer;
-var m,k:integer;
-    a: arr;
-procedure swap(var a,b:integer);
- begin
- a:=a+b;b:=a-b;a:=a-b
- end;
-procedure sort(var b:arr; n:integer; t:string);
- var i,j:integer;
- begin
- if t='az' then
-  for i:=n downto 2 do
-   for j:=1 to i-1 do
-    if a[j]>a[j+1] then swap(a[j],a[j+1]);
- if t='za' then
-  for i:=1 to n-1 do
-   for j:=n-1 downto i do
-    if a[j]<a[j+1] then swap(a[j],a[j+1]);
-  end;
+var a:arr;
+    n,i:integer;
 begin
-clrscr;
-readln(m);
-for k:=1 to m do readln(a[k]);
-writeln;
-sort(a,m,'az');
-for k:=1 to m do write(a[k]:6);
-sort(a,m,'za');
-writeln;
-for k:=1 to m do write(a[k]:6);
+write('n= ');readln(n);
+for i:=1 to n do
+ begin
+ write('A[',i,']=');readln(a[i]);
+ end;
+for i:=1 to n do write(A[i]:5);
 readln
 end.
