@@ -17,7 +17,7 @@ procedure tang(var b:arr; m:integer);
  begin
  for i:=m downto 2 do
   for j:=1 to i-1 do 	
-   if a[j]>a[j+1] then swap(a[j];a[j+1]);
+   if a[j]>a[j+1] then swap(a[j],a[j+1]);
  end;
 
 {giảm dần}
@@ -27,7 +27,7 @@ procedure giam(var b:arr; m:integer);
  begin
  for i:=1 to n-1 do
   for j:=n-1 downto i do 	
-   if a[j]<a[j+1] then swap(a[j];a[j+1]); 
+   if a[j]<a[j+1] then swap(a[j],a[j+1]);
  end;
 
 begin

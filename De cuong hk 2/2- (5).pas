@@ -6,8 +6,6 @@ function Max(x,y:integer):integer;
  end;
 begin
 readln(a,b,c,d);
-Max:=a;
-for i:='b' to 'd' do Max(Max,i);
-writeln('Max= ', Max:10);
+writeln('Max= ',  Max(Max(Max(a,b),c),d):10);
 readln
 end.
