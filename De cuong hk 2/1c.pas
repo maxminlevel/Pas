@@ -11,6 +11,6 @@ for i:=1 to n do
  end;
 s:=0;
 for i:=1 to n do s:=s+A[i];
-write(s);
+write(s/n:10:3);
 readln
 end.

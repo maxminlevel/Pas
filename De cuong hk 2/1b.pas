@@ -9,6 +9,7 @@ for i:=1 to n do
  begin
  write('A[',i,']=');readln(a[i]);
  end;
+ d:=0;
 for i:=1 to n do
  if A[i] mod k =0 then d:=d+1;
 write(d);
