@@ -21,6 +21,7 @@ procedure tang(var b:arr; m:integer);
  end;
 
 {giảm dần}
+{phần này có cách khác: đọc chú ý để biết cách khác ở đâu}
 procedure giam(var b:arr; m:integer);
  var j,tg:integer;
  begin
