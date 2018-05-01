@@ -1,5 +1,3 @@
-{đề: nhập dãy số nguyên và hiển thị các số ra màn hình}
-
 type arr=array [1..100] of integer;
 var a:arr;
     n,i:integer;
