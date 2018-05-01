@@ -1,4 +1,3 @@
-{đề: nhập dãy số nguyên và in ra dãy tăng dần hoặc giảm dần}
 {tăng dần}
 uses crt;
 type arr=array [1..100] of integer;

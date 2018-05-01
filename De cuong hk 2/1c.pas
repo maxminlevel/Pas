@@ -1,4 +1,3 @@
-{đề: nhập dãy số nguyên và tính giá trị trung bình của các phần tử}
 uses crt;
 type arr=array [1..100] of integer;
 var a:arr;

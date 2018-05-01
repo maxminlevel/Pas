@@ -1,4 +1,3 @@
-{đề: nhập dãy số nguyên và đếm có bao nhiêu phần tử chia hết cho k}
 uses crt;
 type arr=array [1..100] of integer;
 var a:arr;
