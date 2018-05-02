@@ -1,0 +1,13 @@
+!dummy.$$$
+!fp___.out
+!fp___.err
+!fp.dir
+*.bak
+*.o
+*.$$$
+*.dir
+*.cfg
+*.err
+*.out
+*.exe
+.gitattributes
